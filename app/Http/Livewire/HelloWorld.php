@@ -10,6 +10,7 @@ class HelloWorld extends Component
     public $name = 'Jelly';
     public $loud = false;
     public $greeting = ['Hello'];
+    public $names = ['Jelly', 'Man', 'Chico'];
 
     public function resetName($name = 'Chico')
     {
