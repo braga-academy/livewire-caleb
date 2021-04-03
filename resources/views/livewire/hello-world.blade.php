@@ -30,4 +30,5 @@
     @endforeach
 
     <button wire:click="$refresh">Refresh</button> {{ now() }}
+    <button wire:click="refreshChildren">Refresh Children</button> {{ now() }}
 </div>

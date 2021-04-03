@@ -7,6 +7,12 @@ use Livewire\Component;
 class SayHi extends Component
 {
     public $name;
+    protected $listeners = ['refreshChildren' => 'refreshMe'];
+
+    public function refreshMe()
+    {
+        //
+    }
 
     public function mount($name)
     {

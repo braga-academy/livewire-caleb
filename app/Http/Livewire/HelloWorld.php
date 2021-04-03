@@ -17,6 +17,11 @@ class HelloWorld extends Component
         $this->name = $name;
     }
 
+    public function refreshChildren()
+    {
+        $this->emit('refreshChildren');
+    }
+
     public function mount(Request $request, $name)
     {
         $this->name = $request->input('name', $name);
