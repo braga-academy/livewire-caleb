@@ -23,11 +23,13 @@ class Register extends Component
     {
         $this->validate();
 
-        User::create([
+        $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
             'password' => Hash::make($this->password)
         ]);
+
+        auth()->login($user);
 
         return redirect('/');
     }
