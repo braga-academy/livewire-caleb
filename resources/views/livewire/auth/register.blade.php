@@ -1,7 +1,7 @@
 <form wire:submit.prevent="register">
     <div>
         <label for="name">name</label>
-        <input wire:model="name" type="text" id="name" name="name">
+        <input wire:model.lazy="name" type="text" id="name" name="name">
         @error('name') <span>{{ $message }}</span> @enderror
     </div>
     <div>
@@ -11,12 +11,12 @@
     </div>
     <div>
         <label for="password">password</label>
-        <input wire:model="password" type="password" id="password" name="password">
+        <input wire:model.lazy="password" type="password" id="password" name="password">
         @error('password') <span>{{ $message }}</span> @enderror
     </div>
     <div>
         <label for="passwordConfirmation">passwordConfirmation</label>
-        <input wire:model="passwordConfirmation" type="password" id="passwordConfirmation" name="passwordConfirmation">
+        <input wire:model.lazy="passwordConfirmation" type="password" id="passwordConfirmation" name="passwordConfirmation">
     </div>
     <div>
         <input type="submit" value="Register">

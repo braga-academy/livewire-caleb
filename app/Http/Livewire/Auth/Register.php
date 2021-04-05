@@ -19,6 +19,11 @@ class Register extends Component
         'password' => 'required|min:6|same:passwordConfirmation',
     ];
 
+    public function updatedEmail()
+    {
+        $this->validate(['email' => 'unique:users']);
+    }
+
     public function register()
     {
         $this->validate();
